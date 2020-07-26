@@ -1,0 +1,167 @@
+{#{% extends "base_site_auth.html" %}#}
+{##}
+{#{% block title %} Register {% endblock title %}#}
+{##}
+{#{% block content %}#}
+{##}
+{#    <!-- Page content -->#}
+{#    <div class="container mt--8 pb-5">#}
+{#      <div class="row justify-content-center">#}
+{#        <div class="col-lg-5 col-md-7">#}
+{#          <div class="card bg-secondary shadow border-0">#}
+{#            <div class="card-header bg-transparent pb-5">#}
+{##}
+{#              <div class="text-muted text-center mt-2 mb-3">#}
+{##}
+{#                {% if msg %}#}
+{#                  <span class="text-danger">{{ msg | safe }}</span>#}
+{#                {% else %}#}
+{#                  Register#}
+{#                {% endif %}#}
+{##}
+{#              </div>#}
+{##}
+{#            </div>#}
+{#            <div class="card-body px-lg-5 py-lg-5">#}
+{##}
+{#              {% if success %}#}
+{##}
+{#                <div class="text-center mt-2 mb-3">#}
+{##}
+{#                  <span class="text-success">{{ success | safe }}</span>#}
+{##}
+{#                </div>#}
+{##}
+{#              {% else %}#}
+{#                <form role="form" method="post" action="">#}
+{##}
+{#                  {{ form.hidden_tag() }}#}
+{##}
+{#                  <div class="form-group mb-3">#}
+{#                    <div class="input-group input-group-alternative">#}
+{#                      <div class="input-group-prepend">#}
+{#                        <span class="input-group-text"><i class="ni ni-single-02"></i></span>#}
+{#                      </div>#}
+{#                      {{ form.username(placeholder="Username",class="form-control") }}#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="form-group mb-3">#}
+{#                    <div class="input-group input-group-alternative">#}
+{#                      <div class="input-group-prepend">#}
+{#                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>#}
+{#                      </div>#}
+{#                      {{ form.email(placeholder="Email",class="form-control") }}#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="form-group">#}
+{#                    <div class="input-group input-group-alternative">#}
+{#                      <div class="input-group-prepend">#}
+{#                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>#}
+{#                      </div>#}
+{#                      {{ form.password(placeholder="Password",class="form-control",type="password") }}#}
+{#                    </div>#}
+{#                  </div>#}
+{##}
+{#                  <div class="text-center">#}
+{#                    <button type="submit" name="register" class="btn btn-primary my-4">Register</button>#}
+{#                  </div>#}
+{#                </form>#}
+{#              {% endif %}#}
+{##}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="row mt-3 text-center">#}
+{#            <div class="col-12">#}
+{#              <a href={{ url_for('base_blueprint.login') }} class="text-light"><small>Login</small></a>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{##}
+{#{% endblock content %}#}
+
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+
+    {% block meta %}
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endblock meta %}
+
+  <title>
+  </title>
+
+  {% block stylesheets %}
+    <!-- Favicon -->
+    <link href="{{ url_for('static', filename='assets/img/brand/favicon.png') }}" rel="icon" type="image/png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <link href="{{ url_for('static', filename='assets/js/plugins/nucleo/css/nucleo.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="{{ url_for('static', filename='assets/css/argon-dashboard.css') }}" rel="stylesheet">
+  {% endblock stylesheets %}
+
+  {% endblock head %}
+</head>
+
+<body class="bg-default">
+
+  <div class="main-content">
+
+        <button type="submit" name="file" class="btn btn-primary my-4" </button>
+
+          <span class="im">
+              <img alt="Image placeholder" src="/static/assets/img/theme/face.jpg">
+          </span>
+
+        <button type="submit" name="file" class="btn btn-primary my-4" </button>
+
+          <span class="avatar avatar-sm rounded-circle">
+              <img alt="Image placeholder" src="/static/assets/img/theme/team-4-800x800.jpg">
+          </span>
+
+        <button type="submit" name="file" class="btn btn-primary my-4" </button>
+
+          <span class="avatar avatar-sm rounded-circle">
+              <img alt="Image transparent" src="/static/assets/img/theme/team-4-800x800.jpg">
+          </span>
+
+  </div>
+
+  {% block javascripts %}
+    <!-- Core -->
+    <script src="{{ url_for('static', filename='assets/js/plugins/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Optional JS -->
+    <script src="{{ url_for('static', filename='assets/js/plugins/chart.js/dist/Chart.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/plugins/chart.js/dist/Chart.extension.js') }}"></script>
+
+    <!-- Argon JS -->
+    <script src="{{ url_for('static', filename='assets/js/argon-dashboard.min.js') }}"></script>
+  {% endblock javascripts %}
+
+</body>
+
+</html>
