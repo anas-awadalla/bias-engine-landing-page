@@ -121,6 +121,18 @@ def upload_file():
         return render_template('login/login.html')
 
 
+@blueprint.route('/model', methods=['GET', 'POST'])
+def model():
+    if request.method == 'POST':
+        if request.form['model_type'] == 'face':
+            return render_template('/app/base/templates/image_transformations.htmll')
+        elif request.form['model_type'] == 'text':
+            return render_template('/app/base/templates/text_transformations.html')
+        # else:
+        #     return render_template('login/register.html')
+    return render_template('image_transformations.html')
+
+
 ## Errors
 
 @login_manager.unauthorized_handler
